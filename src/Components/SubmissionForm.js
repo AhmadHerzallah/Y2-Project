@@ -1,7 +1,6 @@
 import React from "react";
 
 const SubmissionForm = () => {
-  // make a submission form
   return (
     <div>
       <form>

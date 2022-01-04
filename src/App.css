@@ -2,7 +2,6 @@
   text-align: center;
 }
 
-/* add style to .navbar__link */
 .navbar__link {
   color: #61dafb;
   text-decoration: none;
@@ -13,7 +12,6 @@
   transition: all 0.2s;
 }
 
-/* add style to .navbar__brand */
 .navbar__brand {
   color: #61dafb;
   text-decoration: none;
@@ -24,7 +22,6 @@
   transition: all 0.2s;
 }
 
-/* add style to .navbar__status */
 .navbar__status {
   color: #61dafb;
   text-decoration: none;
@@ -35,7 +32,6 @@
   transition: all 0.2s;
 }
 
-/* add style to .navbar__status__message */
 .navbar__status__message {
   border: none;
   background: none;
@@ -47,12 +43,10 @@
   display: inline-block;
   transition: all 0.2s;
 }
-/* HOME */
 .home {
   margin-top: 2rem;
 }
 
-/* add style for .home__universities */
 .home__universities {
   display: flex;
   flex-wrap: wrap;
@@ -116,7 +110,6 @@
   border-radius: 10px;
 }
 
-/* add spacing between buttons */
 .university__button {
   margin-right: 1rem;
   margin-bottom: 1rem;

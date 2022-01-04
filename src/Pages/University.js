@@ -15,14 +15,13 @@ const University = ({ saved, setSaved }) => {
     );
     navigate("/saved");
   };
-  // unsave
   const unsave = () => {
     setSaved((saved) => saved.filter((u) => u.name !== university.name));
     let item = localStorage.getItem("saved");
     window.localStorage.setItem("saved", JSON.stringify(saved));
 
     navigate("/saved");
-    // navigate("/saved");
+    navigate("/saved");
   };
   return (
     <div>

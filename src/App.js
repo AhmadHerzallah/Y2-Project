@@ -27,7 +27,6 @@ function App() {
     }
     return [];
   });
-  // useEffect keep updating localStorage
   useEffect(() => {
     window.localStorage.setItem("saved", JSON.stringify(saved));
   }, [saved]);
