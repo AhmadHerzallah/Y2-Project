@@ -1,9 +1,14 @@
 import React from "react";
+import SubmissionForm from "../Components/SubmissionForm";
+import { Container } from "react-bootstrap";
 
 const ContactUs = () => {
   return (
     <div>
-      <h1>أعطينا مكالمة يا كبير</h1>
+      <Container>
+        <h1>أعطينا مكالمة يا كبير</h1>
+        <SubmissionForm />
+      </Container>
     </div>
   );
 };
