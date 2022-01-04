@@ -9,14 +9,20 @@ const University = ({ saved, setSaved }) => {
 
   const save = () => {
     setSaved((saved) => [...saved, university]);
-    window.localStorage.setItem("saved", JSON.stringify(saved));
+    window.localStorage.setItem(
+      "saved",
+      JSON.stringify([...saved, university]),
+    );
     navigate("/saved");
   };
   // unsave
   const unsave = () => {
-    setSaved((saved) => saved.filter((university) => university.name !== name));
+    setSaved((saved) => saved.filter((u) => u.name !== university.name));
+    let item = localStorage.getItem("saved");
     window.localStorage.setItem("saved", JSON.stringify(saved));
+
     navigate("/saved");
+    // navigate("/saved");
   };
   return (
     <div>
