@@ -2,7 +2,14 @@ import React, { useState } from "react";
 import Card from "../Components/Card";
 import { Container, Row, Col } from "react-bootstrap";
 
-const Saved = ({ saved }) => {
+const Saved = ({ saved, auth }) => {
+  if (!auth) {
+    return (
+      <div>
+        <h1>You must be logged in to see this page</h1>
+      </div>
+    );
+  }
   return (
     <div>
       <Container>

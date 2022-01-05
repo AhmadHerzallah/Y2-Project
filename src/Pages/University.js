@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
-const University = ({ saved, setSaved }) => {
+const University = ({ saved, setSaved, auth }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const university = location.state.university;
@@ -32,6 +32,14 @@ const University = ({ saved, setSaved }) => {
     navigate("/saved");
     navigate("/saved");
   };
+  if (!auth) {
+    return (
+      <div>
+        <h1>You must be logged in to see this page</h1>
+      </div>
+    );
+  }
+
   return (
     <div>
       <Container className="university__container">

@@ -40,12 +40,17 @@ function App() {
             path="/"
             element={auth ? <Home /> : <Login setAuth={setAuth} />}
           />
-          <Route path="/saved" element={<Saved saved={saved} />} />
-          <Route path="/contactus" element={<ContactUs />} />
-          <Route path="/submissionform" element={<SubmissionForm />} />
+          <Route path="/saved" element={<Saved saved={saved} auth={auth} />} />
+          <Route path="/contactus" element={<ContactUs auth={auth} />} />
+          <Route
+            path="/submissionform"
+            element={<SubmissionForm auth={auth} />}
+          />
           <Route
             path="/university/:name"
-            element={<University saved={saved} setSaved={setSaved} />}
+            element={
+              <University saved={saved} setSaved={setSaved} auth={auth} />
+            }
           />
         </Routes>
       </Router>
