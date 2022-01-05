@@ -5,7 +5,16 @@ const University = ({ saved, setSaved }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const university = location.state.university;
-  const { name, url, description } = university;
+  const {
+    web_pages,
+    name,
+    alpha_two_code,
+    state_province,
+    domains,
+    country,
+    description,
+    url,
+  } = university;
 
   const save = () => {
     setSaved((saved) => [...saved, university]);
@@ -28,9 +37,13 @@ const University = ({ saved, setSaved }) => {
       <Container className="university__container">
         <Row>
           <Col>
-            <h1 className="university__container__title">{name}</h1>
+            <a href={web_pages[0]} target="blank">
+              <h1 className="university__container__title">{name}</h1>
+            </a>
             <p className="university__container__description">{description}</p>
-
+            <p className="university__container__state">
+              Location: {country}, {state_province}
+            </p>
             <div className="university__container__buttons">
               <button
                 className="btn btn-primary university__button"
