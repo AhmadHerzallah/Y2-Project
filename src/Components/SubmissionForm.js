@@ -5,21 +5,21 @@ const SubmissionForm = () => {
     <div>
       <form>
         <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Email address</label>
+          <label htmlFor="email">Email address</label>
           <input
             type="email"
             className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
+            id="email"
+            aria-describedby="email"
             placeholder="hassan@hacker.com"
           />
         </div>
         <br />
         <div className="form-group">
-          <label htmlFor="exampleInputPassword1">Message</label>
+          <label htmlFor="msg">Message</label>
           <textarea
             className="form-control"
-            id="exampleFormControlTextarea1"
+            id="msg"
             rows="3"
             placeholder="ألحقنووووي"
           ></textarea>
