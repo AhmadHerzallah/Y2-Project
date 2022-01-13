@@ -10,9 +10,9 @@ const Card = ({ university }) => {
       }}
     >
       <div className="university__card">
-        <img src={url} alt={name} width={100} height={100} />
-        <h5>{name}</h5>
-        <p>{description.substr(0, 120)} ...</p>
+        {url && <img src={url} alt={name} width={100} height={100} />}
+        <h5>{name && name}</h5>
+        <p>{description && description.substr(0, 120)} ...</p>
       </div>
     </Link>
   );

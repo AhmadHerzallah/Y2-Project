@@ -36,11 +36,12 @@ const Home = () => {
           />
         </div>
         <div className="row home__universities">
-          {filteredUniversities.map((university) => (
-            <div className="col-md-4" key={university.id}>
-              <Card university={university} />
-            </div>
-          ))}
+          {filteredUniversities &&
+            filteredUniversities.map((university) => (
+              <div className="col-md-4" key={university.id}>
+                <Card university={university} />
+              </div>
+            ))}
         </div>
       </Container>
     </div>
