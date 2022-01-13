@@ -4,7 +4,7 @@ const Card = ({ university }) => {
   const { name, url, description } = university;
   return (
     <Link
-      to={`/university/${name.split(" ").join("-")}`}
+      to={`/university/${name}`}
       state={{
         university: university,
       }}
