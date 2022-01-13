@@ -15,11 +15,12 @@ const Saved = ({ saved, auth }) => {
       <Container>
         <h1>Saved</h1>
         <div className="row home__universities">
-          {saved.map((university) => (
-            <div className="col-md-4" key={university.id}>
-              <Card university={university} />
-            </div>
-          ))}
+          {saved &&
+            saved.map((university) => (
+              <div className="col-md-4" key={university.id}>
+                <Card university={university} />
+              </div>
+            ))}
         </div>
       </Container>
     </div>
